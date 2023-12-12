@@ -1,0 +1,141 @@
+
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    background: linear-gradient(90deg, rgba(220, 143, 174, 1) 0%, rgba(229, 85, 140, 1) 63%, rgba(209, 74, 74, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+.initialHeading{
+    position: absolute;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 60px;
+    left: 500px;
+
+}
+
+.allCards{
+    display: flex;
+    gap: 1.25rem;
+    position: relative;
+    height:590px;
+    width: 100%;
+}
+
+
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .375rem;
+    font-size:xx-large;
+
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    position: absolute;
+
+    font-family: 'Caveat', cursive;
+    height: 25%;
+    width: 25%;
+        /* global 94%+ browsers support */
+    background: linear-gradient(90deg, rgba(230, 131, 171, 1) 0%, rgba(207, 75, 125, 1) 100%, rgba(213, 76, 117, 1) 100%);
+    color: rgb(255, 0, 174);
+}
+
+.wrapHeart{
+    display: flex;
+    justify-content: center;
+}
+
+.heart{
+    height: 7rem;
+    width: 8rem;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+}
+
+.heartAnimation{
+    animation-name: growMyHeart;
+    /* filter: grayscale(100%); */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes growMyHeart {
+    0%{
+        /* filter: grayscale(0%); */
+        scale: .8;
+    }
+    
+    50%{
+        /* filter: grayscale(100%); */
+        scale: 1.2;
+    }
+    100%{
+        /* filter: grayscale(0%); */
+        scale: .8;
+    }
+}
+
+/* Make a class to put everything in grayScale */
+
+.everythingDark{
+    filter: grayscale(100%);
+}
+
+#card1{
+    top:100px;
+    left: 0px;
+}
+
+#card2{
+    top: 100px;
+    right: 0px;
+}
+
+#card3{
+    /* bottom: 300px; */
+    left: 200px;
+}
+
+#card4{
+    /* bottom: 0px; */
+    right: 200px;
+}
+
+#card5{
+    top: 300px;
+    left: 580px;
+}
+
+.cardAnimation1{
+    transform: scale(0%);
+}
+
+.cardAnimation2{
+    /* transform-origin: bottom; */
+    transition-duration: 2s;
+    transform: scale(1);
+}
+
+.hideIt{
+    display: none;
+}
